@@ -43,7 +43,7 @@ for x in FileList:
         continue
 
     df2['Store'] = b
-    #print(df2)
+    print(df2)
     newdf.append(df2)
 
 newdf = pd.concat(newdf)
