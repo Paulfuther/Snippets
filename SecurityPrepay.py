@@ -54,5 +54,8 @@ newdf['Time'] = newdf['Text'].str.extract(r"([\d]{1,2}\:[\d]{1,2}\:[\d]{1,2})")
 newdf['Time'] = pd.to_datetime(newdf['Time'], format='%H:%M:%S').dt.time
 newdf = newdf[newdf['Time'].between(start, end)]
 
+
+newdf.set_index('Date', inplace=True)
+
 newdf.to_excel("Pumps to Prepay" + ".xlsx", engine='xlsxwriter')
 #print(newdf.dtypes)

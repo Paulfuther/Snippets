@@ -51,6 +51,10 @@ newdf=pd.concat(newdf)
 
 newdf['Date'] = pd.to_datetime(newdf['Date'], dayfirst=True)#.dt.strftime('%d %m %Y')
 
+newdf['Time'] = newdf['Text'].str.extract(r"([\d]{1,2}\:[\d]{1,2}\:[\d]{1,2})")
+newdf['Time'] = pd.to_datetime(newdf['Time'], format='%H:%M:%S').dt.time
+newdf.set_index('Date', inplace=True)
+
 
 newdf.to_excel("Negative Sales" + ".xlsx", engine='xlsxwriter')
 print (newdf.dtypes)
