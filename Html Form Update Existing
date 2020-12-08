@@ -1,0 +1,93 @@
+<label class="formtitle">First Name  </label>
+            <input type="text"  class="form" name = "firstname" value={{gsa.firstname}} required>
+         
+
+            <label class="formtitle" >Nickname</label>
+            <input type="text" class="form"name = "nickname" value={{gsa.nickname}}>
+           
+            <label class="formtitle" >Last Name</label>
+            <input type="text" class="form"name = "lastname" value={{gsa.lastname}} required >
+
+            <label class="formtitle" >Date of Birth</label>
+            <input type="date" class="form"name = "dob" value= {{gsa.dob}} required >
+
+            <label class="formtitle" >Store</label>
+            <select name = "store" class = "form"> 
+            <option value ="{{gsa.store}}"> {{gsa.store}} </option>
+            {% for store in storelist %}
+            <option value="{{ store.number }}" > {{ store.number}} </option> 
+            {% endfor%}
+            </select>
+            
+
+            <label class="formtitle" >Address One</label>
+            <input type="text" class="form" name = "addressone" value={{gsa.addressone}} required >
+        
+
+            <label class="formtitle" >Address Two</label>
+            <input type="text" class="form"name = "addresstwo" value={{gsa.addresstwo}}>
+   
+            <label class="formtitle" >Apt</label>
+            <input type="text" class="form"name = "apt" value={{gsa.apt}}>
+      
+
+            <label class="formtitle">City</label>
+            <input type="text" class="form"name = "city" value={{gsa.city}} required>
+       
+
+            <label class="formtitle"  >Province</label>
+            <input type="text" class="form"name = "province" value={{gsa.province}} required >
+        
+
+            <label class="formtitle"  >Country</label>
+            <input type="text" class="form"name = "country" value={{gsa.country}}>
+        
+            <label class="formtitle">Postal Code</label>
+            <input type="text" class="form"name = "postal" value={{gsa.postal}} required>
+
+            <label class="formtitle">Email</label>
+            <input type="email" class="form"name = "email" value={{gsa.email}} required >
+        
+
+            <label class="formtitle">Mobile Phone</label>
+            <input type="tel" class="form"name = "mobilephone" value={{gsa.mobilephone}} required >
+          
+
+            <label class="formtitle">SIN</label>
+            <input type="text" class="form"name = "SIN"  value={{gsa.SIN}}>
+      
+            <label class="formtitle">SIN Expiration Date</label>
+            <input type="date" class="form"name = "sinexpire" value = {{"gsa.sinexpire"}}>
+
+            <label class="formtitle">Start Date</label>
+            <input type="date" class="form"name = "Startdate" value={{gsa.startdate}} required >
+
+            <label class="formtitle">End Date</label>
+            <input type="date" class="form"name = "Enddate" value = {{"gsa.enddate"}} >
+
+            <label class="formtitle" >Online Training ID</label>
+            <input type="text" class="form"name = "trainingid" value={{gsa.trainingid}} required>
+
+            <label class="formtitle" >Online Training PWD</label>
+            <input type="text" class="form"name = "trainingpassword" value={{gsa.trainingpassword}} required >
+
+            <label class="formtitle" >Manager</label>
+            <select name = "manager" class = "form"> 
+             <option value ="{{gsa.manager}}" > {{gsa.manager}}</option>
+            {% for mgr in mgr %}
+            <option value="{{ mgr.firstname }}" > {{ mgr.firstname}} </option> 
+            {% endfor%}
+            </select>
+
+            <label class="formtitle" >Active</label>
+             <select class="form" name = "active" >
+                <option value ="{{gsa.active}}"> {{gsa.active}} </option>
+                <option value = "y">Y</option>
+                <option value = "n">N</option>
+            </select>
+
+
+
+            <label class="formtitle">Bulloch Code</label>
+            <input type="text" class="form"name = "iprismcode" value={{gsa.iprismcode}} required >
+         
